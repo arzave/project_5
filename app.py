@@ -5,12 +5,16 @@ import streamlit as st
 # Leer los datos
 car_data = pd.read_csv('vehicles_us.csv')
 
+car_data.info()
+
+car_data.head()
+
 # Encabezado
-st.header('Aplicación de análisis de vehículos')
+st.header('Aplicación de Análisis de Vehículos')
 
 # Casillas de verificación
-build_histogram = st.checkbox('Construir histograma')
-build_scatter = st.checkbox('Construir gráfico de dispersión')
+build_histogram = st.checkbox('Construir Histograma')
+build_scatter = st.checkbox('Construir Gráfico de Dispersión')
 
 # Mostrar contenido al seleccionar la casilla de verificación del histograma
 if build_histogram:
